@@ -1,0 +1,8 @@
+name: ItemHover
+description: Allows players to show an item in chat
+version: 1.0
+main: me.poilet66.itemhover.ItemHoverMain
+api-version: 1.15
+commands:
+  testifenabled:
+    usage: /command
