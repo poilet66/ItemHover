@@ -1,22 +1,16 @@
 package me.poilet66.itemhover;
 
-import com.palmergames.bukkit.TownyChat.Chat;
 import com.palmergames.bukkit.TownyChat.events.AsyncChatHookEvent;
 import net.md_5.bungee.api.chat.*;
-import net.minecraft.server.v1_15_R1.NBTTagCompound;
-import org.apache.commons.lang.StringUtils;
-import org.bukkit.Bukkit;
+import net.minecraft.server.v1_16_R3.NBTTagCompound;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
-import org.bukkit.OfflinePlayer;
-import org.bukkit.craftbukkit.v1_15_R1.inventory.CraftItemStack;
+import org.bukkit.craftbukkit.v1_16_R3.inventory.CraftItemStack;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
-
-import javax.xml.soap.Text;
 
 public class ChatListener implements Listener {
 
@@ -48,8 +42,8 @@ public class ChatListener implements Listener {
 
     public String convertItemStackToJson(ItemStack itemStack) {
         // First we convert the item stack into an NMS itemstack
-        net.minecraft.server.v1_15_R1.ItemStack nmsItemStack = CraftItemStack.asNMSCopy(itemStack);
-        net.minecraft.server.v1_15_R1.NBTTagCompound compound = new NBTTagCompound();
+        net.minecraft.server.v1_16_R3.ItemStack nmsItemStack = CraftItemStack.asNMSCopy(itemStack);
+        net.minecraft.server.v1_16_R3.NBTTagCompound compound = new NBTTagCompound();
         compound = nmsItemStack.save(compound);
 
         return compound.toString();
